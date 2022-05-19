@@ -12,7 +12,7 @@ namespace BlazorSozluk.Infrastructure.Persistence.Repositories
 {
     public class EmailConfirmationRepository : GenericRepository<EmailConfirmation>, IEmailConfirmationRepository
     {
-        public EmailConfirmationRepository(DbContext dbContext) : base(dbContext)
+        public EmailConfirmationRepository(BlazorSozlukContext dbContext) : base(dbContext)
         {
         }
     }

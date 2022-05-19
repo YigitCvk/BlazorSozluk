@@ -12,7 +12,7 @@ namespace BlazorSozluk.Infrastructure.Persistence.Repositories
 {
     public class EntryCommentRepository : GenericRepository<EntryComment>, IEntryCommentRepository
     {
-        public EntryCommentRepository(DbContext dbContext) : base(dbContext)
+        public EntryCommentRepository(BlazorSozlukContext dbContext) : base(dbContext)
         {
         }
     }

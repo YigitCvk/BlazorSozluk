@@ -18,16 +18,23 @@ namespace BlazorSozluk.Infrastructure.Persistence.Extensions
         {
             services.AddDbContext<BlazorSozlukContext>(conf =>
             {
-                var connStr = configuration["BlazorSozlukConnectionString"].ToString();
-                conf.UseSqlServer("", opt =>
+                var connStr = configuration["BlazorSozlukDbConnectionString"].ToString();
+                conf.UseSqlServer(connStr, opt =>
                 {
                     opt.EnableRetryOnFailure();
                 });
             });
-            services.AddScoped<IUserRepository,UserRepository>();
+
             //var seedData = new SeedData();
             //seedData.SeedAsync(configuration).GetAwaiter().GetResult();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
+            services.AddScoped<IEntryRepository, EntryRepository>();
+            services.AddScoped<IEntryCommentRepository, EntryCommentRepository>();
+
             return services;
         }
+
     }
 }

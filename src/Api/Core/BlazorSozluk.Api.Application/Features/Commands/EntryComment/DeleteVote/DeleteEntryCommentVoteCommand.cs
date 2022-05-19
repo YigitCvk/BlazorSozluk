@@ -39,3 +39,4 @@ namespace BlazorSozluk.Api.Application.Features.Commands.EntryComment.DeleteVote
             return await Task.FromResult(true);
         }
     }
+}

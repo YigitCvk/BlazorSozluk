@@ -19,3 +19,4 @@ namespace BlazorSozluk.Api.Application.Features.Commands.EntryComment.DeleteFav
             UserId = userId;
         }
     }
+}

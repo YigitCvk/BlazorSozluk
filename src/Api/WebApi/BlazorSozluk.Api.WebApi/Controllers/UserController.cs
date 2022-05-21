@@ -30,21 +30,21 @@ namespace BlazorSozluk.Api.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
         {
-            var result=await mediator.Send(command);
+            var result = await mediator.Send(command);
             return Ok(result);
         }
         [HttpPost]
         [Route("Update")]
         public async Task<IActionResult> UpdateUser([FromBody] UpdateUserCommand command)
         {
-            var result= await mediator.Send(command);
+            var result = await mediator.Send(command);
             return Ok(result);
         }
         [HttpPost]
         [Route("Confirm")]
         public async Task<IActionResult> ConfirmEmail(Guid id)
         {
-            var result = await mediator.Send(new ConfirmEmailCommand() { ConfirmationId=id});
+            var result = await mediator.Send(new ConfirmEmailCommand() { ConfirmationId = id });
             return Ok(result);
         }
         [HttpPost]

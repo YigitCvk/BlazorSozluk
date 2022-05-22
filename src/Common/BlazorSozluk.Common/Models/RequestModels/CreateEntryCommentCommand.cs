@@ -11,17 +11,17 @@ namespace BlazorSozluk.Common.Models.RequestModels
     {
         public Guid? EntryId { get; set; }
         public string Comment { get; set; }
-        public Guid? CreateById { get; set; }
+        public Guid? CreatedById { get; set; }
 
         public CreateEntryCommentCommand()
         {
         }
 
-        public CreateEntryCommentCommand(Guid entryId, string comment, Guid createById)
+        public CreateEntryCommentCommand(Guid entryId, string comment, Guid createdById)
         {
             EntryId = entryId;
             Comment = comment;
-            CreateById = createById;
+            CreatedById = createdById;
         }
     }
 }

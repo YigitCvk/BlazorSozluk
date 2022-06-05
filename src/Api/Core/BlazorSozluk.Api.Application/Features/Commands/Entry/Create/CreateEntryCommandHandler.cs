@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BlazorSozluk.Api.Application.Features.Commands.Entry.Create
 {
-    internal class CreateEntryCommandHandler : IRequestHandler<CreateEntryCommand, Guid>
+    public class CreateEntryCommandHandler : IRequestHandler<CreateEntryCommand, Guid>
     {
         private readonly IEntryRepository entryRepository;
         private readonly IMapper mapper;
